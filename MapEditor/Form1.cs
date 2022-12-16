@@ -1201,7 +1201,7 @@ namespace MapEditor
             Selector1.Size = new Size(32, 32);
             Selector1.Location = new Point(-32, -32);
 
-            TileSet = new Bitmap(@"Tilesets\" + FileName + ".png");
+            TileSet = new Bitmap(@"Tilesets\" + FileName + ".bmp");
             TilesetName = FileName;
             ChipSet.Image = TileSet;
             ChipSet.Size = new System.Drawing.Size(256, TileSet.Height / TileSize * TileSize);

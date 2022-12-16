@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace MapEditor
 {
@@ -26,16 +27,24 @@ namespace MapEditor
 
             foreach (var file in rootDirectoryInfo.GetFiles())
             {
-                if (file.Name.Contains(".png"))
+                if (file.Name.Contains(".bmp"))
                 {
-                    string[] spear = { ".png" };
+                    string[] spear = { ".bmp" };
                     string[] words = file.Name.Split(spear, StringSplitOptions.RemoveEmptyEntries);
 
                     comboBox1.Items.Add(words[0]);
                 }
             }
-
-            comboBox1.SelectedIndex = 0;
+            try
+            {
+                comboBox1.SelectedIndex = 0;
+            }
+            catch
+            {
+                button1.Enabled = false;
+                label1.Text = "No items found";
+            }
+            
         }
 
 
