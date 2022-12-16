@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+.vs\MapEditor\v17
+MapEditor\bin\Debug
